@@ -3,7 +3,7 @@
 [Jing-Trang]: (https://github.com/relaxng/jing-trang)
 [xsData]: (https://github.com/tefra/xsdata)
 
-#[py-xmltv]
+# [py-xmltv]
 
 This is a simple project to turn the official XMLTV DTD/XSDs into proper serialized Python Data classes for easy writing/reading.
 
