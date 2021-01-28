@@ -1,0 +1,6 @@
+**/*.xsd
+**/*.dtd
+.idea/
+venv/
+build/
+xmltv/
