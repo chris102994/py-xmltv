@@ -3,4 +3,9 @@
 .idea/
 venv/
 build/
-xmltv/
+xmltv/models/
+xmltv/__init__.py
+tests/.pytest_cache/
+tests/__pycache__/
+py_xmltv.egg-info/
+.pytest_cache/
