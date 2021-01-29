@@ -85,7 +85,7 @@ setup(
     url="https://github.com/chris102994/py-xmltv",
     long_description='\n{}\n{}'.format(open('README.md').read(), open('CHANGELOG.md').read()).strip('\t'),
     classifiers=[
-        'Development Status :: Production/Stable',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',
         'Operating System :: OS Independent',
