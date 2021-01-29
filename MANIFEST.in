@@ -1,6 +1,8 @@
 include MANIFEST.in
 include CHANGELOG.md
 include README.md
+include xmltv/models/
 include xmltv/models/xmltv.py
+include xmltv/resources/
 include xmltv/resources/xmltv.xsd
 include xmltv/xmltv_helpers.py

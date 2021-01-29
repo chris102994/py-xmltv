@@ -23,15 +23,16 @@ def build():
         print('-- Making the directory: {}.'.format(resources_dir))
         os.makedirs(resources_dir)
     if not pathlib.Path(xsd_file).exists():
-        print('[1/2] Building {} from the official dtd file from the URL: {} using the RELAX NG TRANG tool.'.format(xsd_file, xmltv_dtd_url))
-        subprocess.Popen(['pytrang', '-I', 'dtd', '-O', 'xsd', xmltv_dtd_url,  xsd_file],
+        print('[1/2] Building {} from the official dtd file from the URL: {} using the RELAX NG TRANG tool.'.format(
+            xsd_file, xmltv_dtd_url))
+        subprocess.Popen(['pytrang', '-I', 'dtd', '-O', 'xsd', xmltv_dtd_url, xsd_file],
                          stdout=subprocess.PIPE,
                          stderr=subprocess.PIPE).wait()
     if not pathlib.Path(xmltv_models_dir).exists():
         print('[2/2] Building serialized data classes from the {} file generated in the last step.'.format(xsd_file))
         subprocess.Popen(['xsdata', 'generate', '--package', xmltv_models_dir, xsd_file],
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE).wait()
+                         stdout=subprocess.PIPE,
+                         stderr=subprocess.PIPE).wait()
 
 
 def clean():
@@ -75,7 +76,6 @@ if "clean" in sys.argv:
 if "test" in sys.argv:
     test()
 
-
 setup(
     name="py-xmltv",
     description="An Auto-Generated Python Module for Reading and Writing XMLTV Files based on the official XMLTV XSD and DTD schema.",
@@ -84,6 +84,7 @@ setup(
     author_email="chris102994@yahoo.com",
     url="https://github.com/chris102994/py-xmltv",
     long_description='\n{}\n{}'.format(open('README.md').read(), open('CHANGELOG.md').read()).strip('\t'),
+    long_description_content_type="text/markdown",
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
@@ -94,5 +95,7 @@ setup(
     ],
     requires=['xsdata'],
     license="LGPL-3.0+",
-    packages=['xmltv']
+    packages=['xmltv', 'xmltv/models'],
+    package_data={'': ['xmltv/resources/']},
+    include_package_data=True
 )
