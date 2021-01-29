@@ -11,3 +11,4 @@ deploy:
   username: "__token__"
   password: "${PYPI_TOKEN}"
   skip_existing: true
+  skip_cleanup: true
