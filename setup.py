@@ -79,7 +79,7 @@ if "test" in sys.argv:
 setup(
     name="py-xmltv",
     description="An Auto-Generated Python Module for Reading and Writing XMLTV Files based on the official XMLTV XSD and DTD schema.",
-    version='1.0',
+    version='1.0.1',
     author="Chris102994",
     author_email="chris102994@yahoo.com",
     url="https://github.com/chris102994/py-xmltv",
