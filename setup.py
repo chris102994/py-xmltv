@@ -30,6 +30,7 @@ def build():
                          stderr=subprocess.PIPE).wait()
     if not pathlib.Path(xmltv_models_dir).exists():
         print('[2/2] Building serialized data classes from the {} file generated in the last step.'.format(xsd_file))
+        os.makedirs(xmltv_models_dir)
         subprocess.Popen(['xsdata', 'generate', xsd_file],
                          stdout=subprocess.PIPE,
                          stderr=subprocess.PIPE).wait()
