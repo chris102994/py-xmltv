@@ -64,6 +64,7 @@ def write_file_from_xml(
         encoding="UTF-8",
         xml_version="1.1",
         xml_declaration=False,
+        schema_location="resources/xmltv.xsd",
         no_namespace_schema_location=None))
 
     with xml_file_path.open("w") as data:
