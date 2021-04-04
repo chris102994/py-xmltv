@@ -66,13 +66,6 @@ def clean():
 def test():
     print('-- Installing Test Requirements.')
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pytest'])
-    print('-- Removing generated init\'s')
-    if pathlib.Path('{}/__init__.py'.format(xmltv_pkg_dir)).exists():
-        print('-- Removing {}.'.format('{}/__init__.py'.format(xmltv_pkg_dir)))
-        os.remove('{}/__init__.py'.format(xmltv_pkg_dir))
-    if pathlib.Path('{}/__init__.py'.format(xmltv_models_dir)).exists():
-        print('-- Removing {}.'.format('{}/__init__.py'.format(xmltv_models_dir)))
-        os.remove('{}/__init__.py'.format(xmltv_models_dir))
     subprocess.check_call([sys.executable, '-m', 'pytest', 'tests/'])
 
 
