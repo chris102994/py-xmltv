@@ -4,7 +4,6 @@ python:
 
 script:
   - ./setup.py build
-  - ./setup.py install
   - ./setup.py test
 
 deploy:

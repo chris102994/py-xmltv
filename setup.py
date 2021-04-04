@@ -64,6 +64,7 @@ def clean():
 def test():
     print('-- Installing Test Requirements.')
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pytest'])
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '.'])
     subprocess.check_call([sys.executable, '-m', 'pytest', 'tests/'])
 
 
