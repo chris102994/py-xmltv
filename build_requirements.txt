@@ -1,2 +1,3 @@
 jingtrang
 xsdata
+xsdata[cli]
