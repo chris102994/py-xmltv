@@ -13,7 +13,6 @@ T = TypeVar("T")
 
 _RATING_INFO = json.loads(open(pkg_resources.resource_filename(__name__, 'data/rating_info.json'), 'r').read())
 
-
 def get_rating_object(
     rating: str
 ):
