@@ -1,0 +1,106 @@
+{
+    "TV-Y": {
+        "rating_system": "VCHIP",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/TV-Y_icon.svg/240px-TV-Y_icon.svg.png"
+    },
+    "TV-Y7": {
+        "rating_system": "VCHIP",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/TV-Y7_icon.svg/240px-TV-Y7_icon.svg.png"
+    },
+    "TV-G": {
+        "rating_system": "VCHIP",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/TV-G_icon.svg/240px-TV-G_icon.svg.png"
+    },
+    "TV-PG": {
+        "rating_system": "VCHIP",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/TV-PG_icon.svg/240px-TV-PG_icon.svg.png"
+    },
+    "TV-14": {
+        "rating_system": "VCHIP",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/TV-14_icon.svg/240px-TV-14_icon.svg.png"
+    },
+    "TV-MA": {
+        "rating_system": "VCHIP",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/TV-MA_icon.svg/240px-TV-MA_icon.svg.png"
+    },
+    "G": {
+        "rating_system": "MPA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/RATED_G.svg/240px-RATED_G.svg.png"
+    },
+    "PG": {
+        "rating_system": "MPA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/RATED_PG.svg/240px-RATED_PG.svg.png"
+    },
+    "PG-13": {
+        "rating_system": "MPA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/RATED_PG-13.svg/240px-RATED_PG-13.svg.png"
+    },
+    "R": {
+        "rating_system": "MPA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/RATED_R.svg/240px-RATED_R.svg.png"
+    },
+    "NC-17": {
+        "rating_system": "MPA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Nc-17.svg/240px-Nc-17.svg.png"
+    },
+    "U": {
+        "rating_system": "BBFC",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/BBFC_U_2019.svg/240px-BBFC_U_2019.svg.png"
+    },
+    "12": {
+        "rating_system": "BBFC",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/BBFC_12_2019.svg/240px-BBFC_12_2019.svg.png"
+    },
+    "12A": {
+        "rating_system": "BBFC",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/BBFC_12A_2019.svg/240px-BBFC_12A_2019.svg.png"
+    },
+    "15": {
+        "rating_system": "BBFC",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/BBFC_15_2019.svg/240px-BBFC_15_2019.svg.png"
+    },
+    "18": {
+        "rating_system": "BBFC",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/BBFC_18_2019.svg/240px-BBFC_18_2019.svg.png"
+    },
+    "R18": {
+        "rating_system": "BBFC",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/BBFC_R18_2019.svg/240px-BBFC_R18_2019.svg.png"
+    },
+    "0+": {
+        "rating_system": "GSRR",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/GSRR_G_logo.svg/240px-GSRR_G_logo.svg.png"
+    },
+    "6+": {
+        "rating_system": "GSRR",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/GSRR_P_logo.svg/240px-GSRR_P_logo.svg.png"
+    },
+    "12+": {
+        "rating_system": "GSRR",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/GSRR_PG_12_logo.svg/240px-GSRR_PG_12_logo.svg.png"
+    },
+    "15+": {
+        "rating_system": "GSRR",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/GSRR_PG_15_logo.svg/240px-GSRR_PG_15_logo.svg.png"
+    },
+    "18+": {
+        "rating_system": "GSRR",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/GSRR_R_logo.svg/240px-GSRR_R_logo.svg.png"
+    },
+    "NR": {
+        "rating_system": "MPA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/NOTRATED.svg/240px-NOTRATED.svg.png"
+    },
+    "NO RATING": {
+        "rating_system": "MPA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/NOTRATED.svg/240px-NOTRATED.svg.png"
+    },
+    "NOT RATED": {
+        "rating_system": "MPA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/NOTRATED.svg/240px-NOTRATED.svg.png"
+    },
+    "UR": {
+        "rating_system": "MPA",
+        "logo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Unratedlogo.svg/240px-Unratedlogo.svg.png"
+    }
+}

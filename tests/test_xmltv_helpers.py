@@ -26,3 +26,18 @@ def test_write_file_from_xml():
     assert os.path.exists(xmltv_out_file) and os.path.getsize(xmltv_out_file) > 0  # Ensure it writes a file that's not empty.
     data2 = xmltv_helpers.serialize_xml_from_file(xmltv_in_file, Tv)
     assert data == data2  # Ensure the data just written is the same as the data just read.
+
+
+def test_get_rating_info():
+    expected = Rating(
+        value='G',
+        system='MPA',
+        icon=[
+            Icon(
+                src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/RATED_G.svg/240px-RATED_G.svg.png'
+            )
+        ]
+    )
+    retrieved = xmltv_helpers.get_rating_object('G')
+    assert type(retrieved) is Rating
+    assert retrieved == expected

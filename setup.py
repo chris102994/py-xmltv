@@ -30,7 +30,7 @@ def build():
                          stderr=subprocess.PIPE).wait()
     if not pathlib.Path(xmltv_models_dir).exists():
         print('[2/2] Building serialized data classes from the {} file generated in the last step.'.format(xsd_file))
-        subprocess.Popen(['xsdata', 'generate', '--package', xmltv_models_dir, xsd_file],
+        subprocess.Popen(['xsdata', 'generate', '--ns-struct', '--compound-fields', 'true', '--package', xmltv_models_dir, xsd_file],
                          stdout=subprocess.PIPE,
                          stderr=subprocess.PIPE).wait()
 
@@ -79,7 +79,7 @@ if "test" in sys.argv:
 setup(
     name="py-xmltv",
     description="An Auto-Generated Python Module for Reading and Writing XMLTV Files based on the official XMLTV XSD and DTD schema.",
-    version='1.0.1',
+    version='1.0.2',
     author="Chris102994",
     author_email="chris102994@yahoo.com",
     url="https://github.com/chris102994/py-xmltv",
@@ -96,6 +96,6 @@ setup(
     requires=['xsdata'],
     license="LGPL-3.0+",
     packages=['xmltv', 'xmltv/models'],
-    package_data={'': ['xmltv/resources/']},
+    package_data={'': ['xmltv/resources/', 'xmltv/data/']},
     include_package_data=True
 )
