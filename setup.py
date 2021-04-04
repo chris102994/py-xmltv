@@ -30,9 +30,10 @@ def build():
                          stderr=subprocess.PIPE).wait()
     if not pathlib.Path(xmltv_models_dir).exists():
         print('[2/2] Building serialized data classes from the {} file generated in the last step.'.format(xsd_file))
-        subprocess.Popen(['xsdata', 'generate', '--ns-struct', '--compound-fields', 'true', '--package', xmltv_models_dir, xsd_file],
+        subprocess.Popen(['xsdata', 'generate', xsd_file],
                          stdout=subprocess.PIPE,
                          stderr=subprocess.PIPE).wait()
+    print('DONE: With manual build.')
 
 
 def clean():
@@ -64,7 +65,6 @@ def clean():
 def test():
     print('-- Installing Test Requirements.')
     subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'pytest'])
-    subprocess.check_call([sys.executable, '-m', 'pip', 'install', '.'])
     subprocess.check_call([sys.executable, '-m', 'pytest', 'tests/'])
 
 
