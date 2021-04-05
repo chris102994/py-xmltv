@@ -63,7 +63,7 @@ class custom_build(build_py):
     if not pathlib.Path(xsd_file).exists():
         print('[1/2] Building {} from the official dtd file from the URL: {} using the RELAX NG TRANG tool.'.format(
             xsd_file, xmltv_dtd_url))
-        subprocess.Popen(['trang', '-I', 'dtd', '-O', 'xsd', xmltv_dtd_url, xsd_file],
+        subprocess.Popen(['pytrang', '-I', 'dtd', '-O', 'xsd', xmltv_dtd_url, xsd_file],
                          stdout=subprocess.PIPE,
                          stderr=subprocess.PIPE).wait()
 
