@@ -42,10 +42,6 @@ class custom_clean(Command):
             print('-- Removing {}.'.format(build_path))
             shutil.rmtree(build_path)
 
-        if pathlib.Path('{}/__init__.py'.format(xmltv_pkg_dir)).exists():
-            print('-- Removing {}.'.format('{}/__init__.py'.format(xmltv_pkg_dir)))
-            os.remove('{}/__init__.py'.format(xmltv_pkg_dir))
-
         if pathlib.Path('py_xmltv.egg-info').exists():
             print('--Removing {}.'.format('py_xmltv.egg-info'))
             shutil.rmtree('py_xmltv.egg-info')

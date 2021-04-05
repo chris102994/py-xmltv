@@ -6,7 +6,6 @@ venv/
 build/
 xmltv/models/
 xmltv/__pycache__/
-xmltv/__init__.py
 tests/.pytest_cache/
 tests/__pycache__/
 py_xmltv.egg-info/
