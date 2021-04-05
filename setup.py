@@ -36,6 +36,10 @@ class custom_clean(Command):
             print('-- Removing {}.'.format(xmltv_models_dir))
             shutil.rmtree(xmltv_models_dir)
 
+        if pathlib.Path('.tox/').exists():
+            print('-- Removing {}.'.format('.tox/'))
+            shutil.rmtree('.tox/')
+
         if pathlib.Path(build_path).exists():
             print('-- Removing {}.'.format(build_path))
             shutil.rmtree(build_path)
