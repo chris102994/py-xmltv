@@ -1,10 +1,13 @@
 language: python
 python:
   - "3.6"
+  - "3.7"
+  - "3.8"
+  - "3.9"
 
 script:
-  - ./setup.py build
-  - ./setup.py test
+  - python -m pip install tox
+  - tox -e py
 
 deploy:
   provider: pypi
