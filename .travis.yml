@@ -8,10 +8,10 @@ python:
 
 before_install:
   - python -m pip install tox pytest jingtrang xsdata xsdata[cli]
-  - ./setup build
+  - python setup build
 
 install:
-  - ./setup install
+  - python setup install
 
 script:
   - tox -e py
