@@ -1,10 +1,3 @@
-include MANIFEST.in
-include CHANGELOG.md
-include README.md
-include xmltv/models/
-include xmltv/models/xmltv.py
-include xmltv/resources/
-include xmltv/resources/xmltv.xsd
-include xmltv/xmltv_helpers.py
-include xmltv/data/
-include xmltv/data/rating_info.json
+include MANIFEST.in CHANGELOG.md README.md
+recursive-include tests *
+recursive-include xmltv *
