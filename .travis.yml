@@ -7,9 +7,7 @@ python:
   - "3.9"
 
 install:
-  - python -m pip install tox
-  - pip3 install -e .[build]
-  - pip3 install -e .[test]
+  - python -m pip install tox pytest jingtrang xsdata xsdata[cli]
 
 script:
   - tox -e build

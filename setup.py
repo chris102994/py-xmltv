@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 
-#from setuptools import setup
 import subprocess
 import os
 import shutil
-import sys
 import pathlib
 import distutils.core
 from distutils.command.build_py import build_py
