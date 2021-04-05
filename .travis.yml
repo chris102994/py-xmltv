@@ -7,6 +7,7 @@ python:
 
 script:
   - python -m pip install tox
+  - tox -e build
   - tox -e py
 
 deploy:
