@@ -9,6 +9,8 @@ import pathlib
 import distutils.core
 from distutils.command.build_py import build_py
 from distutils.cmd import Command
+from jingtrang import trang
+import xsdata.cli
 
 xmltv_pkg_dir = 'xmltv'
 resources_dir = '{}/resources'.format(xmltv_pkg_dir)
@@ -61,15 +63,18 @@ class custom_build(build_py):
     if not pathlib.Path(xsd_file).exists():
         print('[1/2] Building {} from the official dtd file from the URL: {} using the RELAX NG TRANG tool.'.format(
             xsd_file, xmltv_dtd_url))
-        subprocess.Popen(['pytrang', '-I', 'dtd', '-O', 'xsd', xmltv_dtd_url, xsd_file],
-                         stdout=subprocess.PIPE,
-                         stderr=subprocess.PIPE).wait()
+        argv_bak = sys.argv
+        try:
+            print('BAK', argv_bak)
+            sys.argv = ['', '-I', 'dtd', '-O', 'xsd', xmltv_dtd_url, xsd_file]
+            trang()
+        except SystemExit as e:
+            sys.argv = argv_bak
+
     if not pathlib.Path(xmltv_models_dir).exists():
         print('[2/2] Building serialized data classes from the {} file generated in the last step.'.format(xsd_file))
         os.makedirs(xmltv_models_dir)
-        subprocess.Popen(['xsdata', 'generate', xsd_file],
-                         stdout=subprocess.PIPE,
-                         stderr=subprocess.PIPE).wait()
+        xsdata.cli.generate([xsd_file, '--config', '.xsdata.xml'])
 
 class custom_test(Command):
     description = """Custom Test Commands"""
