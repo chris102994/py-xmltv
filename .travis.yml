@@ -12,6 +12,7 @@ before_install:
 
 install:
   - python setup.py install
+  - python -m pip show -f py-xmltv
 
 script:
   - tox -e py
