@@ -11,3 +11,6 @@
 ## 1.0.2
 * Add helper method to get a proper rating object.
   * Added tests for this method.
+  
+## 1.0.3
+* Updating the setup and dependencies
