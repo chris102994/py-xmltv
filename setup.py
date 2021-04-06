@@ -4,6 +4,7 @@ import subprocess
 import os
 import sh
 import shutil
+import sys
 import pathlib
 import distutils.core
 from distutils.command.build_py import build_py
@@ -64,7 +65,7 @@ class custom_build(build_py):
             sh.pytrang('-I', 'dtd', '-O', 'xsd', xmltv_dtd_url, xsd_file)
         except sh.ErrorReturnCode as error:
             print('Missing Files. This is likely java.', error)
-            raise SystemExit
+            sys.exit(1)
 
     if not pathlib.Path(xmltv_models_dir).exists():
         print('[2/2] Building serialized data classes from the {} file generated in the last step.'.format(xsd_file))
@@ -73,7 +74,7 @@ class custom_build(build_py):
             sh.xsdata('generate', xsd_file)
         except sh.ErrorReturnCode as error:
             print('Error generating data class from the XSD file {}.'.format(xsd_file), error)
-            raise SystemExit
+            sys.exit(1)
 
 
 class custom_test(Command):
