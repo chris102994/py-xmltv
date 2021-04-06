@@ -6,13 +6,17 @@ python:
   - "3.8"
   - "3.9"
 
+addons:
+  apt:
+    packages:
+      - oracle-java8-set-default
+
 before_install:
-  - python -m pip install tox pytest jingtrang xsdata xsdata[cli]
+  - python -m pip install jingtrang pytest sh tox xsdata xsdata[cli]
   - python setup.py build
 
 install:
   - python setup.py install
-  - python -m pip show -f py-xmltv
 
 script:
   - tox -e py
