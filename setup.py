@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 import sh
 import shutil
 import sys
@@ -96,5 +96,6 @@ setup(
         'clean': custom_clean,
         'build_py': custom_build,
         'test': custom_test
-    }
+    },
+    packages=find_packages()
 )

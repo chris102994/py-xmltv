@@ -13,4 +13,7 @@
   * Added tests for this method.
   
 ## 1.0.3
-* Updating the setup and dependencies
+* Updating the setup and dependencies.
+
+## 1.0.4
+* Fixed missing files in pypi.
