@@ -1,12 +1,11 @@
 #!/usr/bin/env python
 
-import subprocess
 import os
+from setuptools import setup
 import sh
 import shutil
 import sys
 import pathlib
-import distutils.core
 from distutils.command.build_py import build_py
 from distutils.cmd import Command
 
@@ -92,7 +91,7 @@ class custom_test(Command):
         pytest.main(['tests/'])
 
 
-distutils.core.setup(
+setup(
     cmdclass={
         'clean': custom_clean,
         'build_py': custom_build,
