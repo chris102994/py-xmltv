@@ -17,3 +17,6 @@
 
 ## 1.0.4
 * Fixed missing files in pypi.
+
+## 1.0.5
+* Added missing data files.
