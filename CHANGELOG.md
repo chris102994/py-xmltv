@@ -20,3 +20,6 @@
 
 ## 1.0.5
 * Added missing data files.
+
+## 1.0.6
+* Fixed the packaging issues.

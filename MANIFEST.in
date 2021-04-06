@@ -1,5 +1,0 @@
-include MANIFEST.in CHANGELOG.md README.md
-recursive-include tests *
-recursive-include xmltv *
-recursive-exclude tests/__pycache__/ *
-recursive-exclude xmltv/__pycache__/ *
