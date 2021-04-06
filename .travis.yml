@@ -12,7 +12,7 @@ addons:
       - default-jre
 
 install:
-  - python -m pip install jingtrang pytest sh tox xsdata xsdata[cli]
+  - python -m pip install jingtrang pytest sh tox xsdata[cli]
 
 script:
   - tox -e build
