@@ -11,6 +11,9 @@ addons:
     packages:
       - default-jre
 
+before_install:
+  - python -m pip install --upgrade pip
+
 install:
   - python -m pip install jingtrang pytest sh tox xsdata[cli]
 
@@ -22,6 +25,6 @@ deploy:
   provider: pypi
   username: "__token__"
   password: "${PYPI_TOKEN}"
-  skip_existing: true
+  skip_existing: false
   skip_cleanup: true
   distributions: "sdist bdist_wheel"
