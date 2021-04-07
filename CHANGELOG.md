@@ -23,3 +23,6 @@
 
 ## 1.0.6
 * Fixed the packaging issues.
+
+## 1.0.7
+* Add binary distribution and twine tests.

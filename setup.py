@@ -98,7 +98,7 @@ class custom_test(Command):
 setup(
     cmdclass={
         'clean': custom_clean,
-        'build_py': custom_build,
+        #'build_py': custom_build,
         'test': custom_test
     }
 )
