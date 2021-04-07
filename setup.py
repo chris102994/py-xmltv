@@ -10,9 +10,9 @@ from distutils.command.build_py import build_py
 from distutils.cmd import Command
 
 xmltv_pkg_dir = 'xmltv'
-data_dir = '{}/data'.format(xmltv_pkg_dir)
+resources_dir = '{}/resources'.format(xmltv_pkg_dir)
 xmltv_models_dir = '{}/models'.format(xmltv_pkg_dir)
-xsd_file = '{}/xmltv.xsd'.format(data_dir)
+xsd_file = '{}/xmltv.xsd'.format(resources_dir)
 build_path = 'build'
 xmltv_dtd_url = 'https://raw.githubusercontent.com/XMLTV/xmltv/master/xmltv.dtd'
 
@@ -58,6 +58,9 @@ class custom_clean(Command):
 
 class custom_build(build_py):
     description = """Custom Build Commands"""
+    if not pathlib.Path(resources_dir).exists():
+        print('-- Making the directory: {}.'.format(resources_dir))
+        os.makedirs(resources_dir)
     if not pathlib.Path(xsd_file).exists():
         print('[1/2] Building {} from the official dtd file from the URL: {} using the RELAX NG TRANG tool.'.format(
             xsd_file, xmltv_dtd_url))
